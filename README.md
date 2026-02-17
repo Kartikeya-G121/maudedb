@@ -1,8 +1,12 @@
-# MAUDE Database Explorer
+# Medical Device Recall Tracker
 
-Python-based web application for exploring medical device adverse event data from the FDA's MAUDE (Manufacturer and User Facility Device Experience) database.
+Python-based web application for tracking medical device recalls and adverse events from multiple sources:
+- **🇺🇸 US FDA MAUDE** (Manufacturer and User Facility Device Experience) database
+- **🍁 Health Canada** Recalls & Safety Alerts
 
-## About the MAUDE Database
+## Data Sources
+
+### 🇺🇸 US FDA MAUDE Database
 
 ### What is MAUDE?
 
@@ -138,6 +142,22 @@ Tracking specific manufacturers for:
 - User facility reports (hospital perspective)
 - Voluntary reports (may indicate underreporting gaps)
 
+---
+
+### 🍁 Health Canada Recalls & Safety Alerts
+
+The application also tracks medical device recalls from **Health Canada**, providing:
+
+- **Daily Updates** - Bulk JSON data updated daily
+- **Medical Device Focus** - Filters to show only medical device recalls
+- **Recall Classification** - Type I (most severe), Type II, Type III
+- **Device Categories** - Anaesthesiology, Cardiovascular, Dental, Orthopedic, etc.
+- **No API Key Required** - Direct access to open data
+
+**Data Source**: [Health Canada Recalls & Safety Alerts](https://recalls-rappels.canada.ca/en)
+
+---
+
 ## Installation & Setup
 
 ### Option 1: Web UI (Recommended)
@@ -151,6 +171,11 @@ python maude_ui.py
 ```
 
 Then open your browser to `http://localhost:8050`
+
+**Features**:
+- 🇺🇸 Search US FDA MAUDE database with advanced filters
+- 🔔 Create subscriptions for automated monitoring (US data)
+- 🍁 Browse Health Canada medical device recalls
 
 ### Option 2: Python API
 
